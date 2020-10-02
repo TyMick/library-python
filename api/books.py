@@ -1,10 +1,25 @@
-from flask import request
+from flask import request, jsonify
 from database import get_db
 import nanoid
 
 
 def get_all_books():
-    pass
+    try:
+        db = get_db()
+        c = db.cursor()
+        c.execute(
+            """
+            SELECT b.title AS title, b._id AS _id, count(c.text) AS commentcount
+            FROM book AS b LEFT JOIN comment AS c ON b._id = c.book_id
+            GROUP BY title, _id
+            ORDER BY title
+            """
+        )
+
+        return jsonify(c.fetchall())
+
+    except:
+        return "Database error"
 
 
 def add_new_book():
