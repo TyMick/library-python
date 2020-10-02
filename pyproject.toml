@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "library-python"
 version = "0.1.0"
-description = "Python personal library API"
+description = "Python personal library microservice"
 authors = ["Ty Mick <ty@tymick.me>"]
 
 [tool.poetry.dependencies]
