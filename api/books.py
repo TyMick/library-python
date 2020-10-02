@@ -41,7 +41,14 @@ def add_new_book():
 
 
 def delete_all_books():
-    pass
+    try:
+        db = get_db()
+        c = db.cursor()
+        c.execute("DELETE FROM book")
+        db.commit()
+        return "Delete successful"
+    except:
+        return "Database error"
 
 
 def get_one_book(book_id):
