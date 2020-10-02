@@ -2,7 +2,7 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/tywmick/library-python)](https://repl.it/github/tywmick/library-python)
 
-This is a Python port of my [Node.js personal library microservice](https://ty-library.glitch.me/), built with [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [SQLite](https://sqlite.org/index.html). The front end API tests on the home page also uses [Bootstrap](https://getbootstrap.com/), [jQuery](https://jquery.com/), and [highlight.js](https://highlightjs.org/). The API fulfills the following user stories:
+This is a Python port of my [Node.js personal library microservice](https://ty-library.glitch.me/), built with [Flask](https://flask.palletsprojects.com/en/1.1.x/) and [SQLite](https://sqlite.org/index.html). The front end API tests on the home page also use [Bootstrap](https://getbootstrap.com/), [jQuery](https://jquery.com/), and [highlight.js](https://highlightjs.org/). The API fulfills the following user stories:
 
 1. I can **post** a `title` to `/api/books` to add a book and returned will be the object with the `title` and a unique `_id`.
 2. I can **get** `/api/books` to retrieve an aray of all books containing `title`, `_id`, & `commentcount`.
