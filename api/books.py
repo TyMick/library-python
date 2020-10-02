@@ -94,4 +94,17 @@ def add_comment(book_id):
 
 
 def delete_one_book(book_id):
-    pass
+    try:
+        db = get_db()
+        c = db.cursor()
+        c.execute("DELETE FROM book WHERE _id == ?", (book_id,))
+        db.commit()
+
+        c.execute("SELECT changes() AS rows_deleted")
+        if c.fetchone()["rows_deleted"] > 0:
+            return "Delete successful"
+        else:
+            return "No book exists"
+
+    except:
+        return "Database error"
