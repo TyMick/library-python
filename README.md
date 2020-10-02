@@ -1,4 +1,4 @@
-# Python stock price checker
+# Python personal library microservice
 
 [![Run on Repl.it](https://repl.it/badge/github/tywmick/library-python)](https://repl.it/github/tywmick/library-python)
 
